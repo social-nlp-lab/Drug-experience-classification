@@ -15,3 +15,19 @@ The results of this study will be used to design a mixed-methods study to explor
 - [Socially-supportive norms and mutual aid of people who use opioids: An analysis of Reddit during the initial COVID-19 pandemic](https://www.sciencedirect.com/science/article/pii/S0376871621001678?via%3Dihub)
 - [A Hybrid Approach for Drug Abuse Events Extraction from Twitter](https://www.sciencedirect.com/science/article/pii/S1877050916319226)
 - [Few shot learning with ne-tuned language model for suicidal text detection](https://www.researchsquare.com/article/rs-2392230/v1)
+
+---
+
+### Data
+
+- Posts from the following four subreddits: 
+  - [r/opiates](https://www.reddit.com/r/opiates/)
+  - [r/cocaine](https://www.reddit.com/r/cocaine/)
+  - [r/stims](https://www.reddit.com/r/stims/)
+  - [r/benzodiazepines](https://www.reddit.com/r/benzodiazepines/)
+  
+- Unit of analysis: sentence
+- Exclusions: 
+  - posts made by known bots
+  - title + body of a post is fewer than 5 words
+    - including posts that are just links or other media (like images)
