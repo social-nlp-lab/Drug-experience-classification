@@ -2,7 +2,7 @@
 library(tidyverse)
 library(jsonlite)
 library(tokenizers)
-od_path <- "~/OneDrive - Drexel University/Social_NLP_Lab/Data/Central/data Dec 1st 2022/data 2018_1_1 to 2022_7_30_"
+od_path <- "~/OneDrive - Drexel University/Social_NLP_Lab/Datasets/Reddit Drug Data- RAW - DNT/Central/data Dec 1st 2022/data 2018_1_1 to 2022_7_30_"
 subs <- c("opiates", "cocaine", "stims", "benzodiazepines", "ambien")
 
 posts <- subs |> map(\(x){
@@ -37,6 +37,6 @@ sample <- sample |>
   unnest(sentence)
 
 # # export to csv
-write_csv(sample, "./data/sample_posts1.csv")
+write_excel_csv(sample, "./data/sample_posts1.xls")
 
 
