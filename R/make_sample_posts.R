@@ -3,7 +3,7 @@ library(tidyverse)
 library(jsonlite)
 library(tokenizers)
 od_path <- "~/OneDrive - Drexel University/Social_NLP_Lab/Datasets/Reddit Drug Data- RAW - DNT/Central/data Dec 1st 2022/data 2018_1_1 to 2022_7_30_"
-subs <- c("opiates", "cocaine", "stims", "benzodiazepines", "ambien")
+subs <- c("opiates", "cocaine", "stims", "benzodiazepines")
 
 posts <- subs |> map(\(x){
   df <- tibble(read_json(paste0(od_path, x, "_submission.json"),
@@ -19,7 +19,7 @@ posts <- posts |>
 
 # get a random sample of 3 posts
 
-set.seed(2023)
+# set.seed(2023)
 sample <- sample_n(posts, 25) |>
   select(id, title, text) |>
   # concatenate title and text
@@ -29,14 +29,17 @@ sample <- sample_n(posts, 25) |>
 
 # clean posts and tokenize for analysis
 
-sample_ls <- tokenize_sentences(sample$all_text)
-names(sample_ls) <- sample$id
-sample <- tibble(id = names(sample_ls), sentence = sample_ls)
+# sample_ls <- tokenize_sentences(sample$all_text)
+# names(sample_ls) <- sample$id
+# sample <- tibble(id = names(sample_ls), sentence = sample_ls)
 # unlist sentence col
-sample <- sample |>
-  unnest(sentence)
+# sample <- sample |>
+#   unnest(sentence)
+
+sample <- sample |> 
+  select(id, all_text)
 
 # # export to csv
-write_excel_csv(sample, "./data/sample_posts1.xls")
+write_csv(sample, "./data/sample_posts3.csv")
 
 
