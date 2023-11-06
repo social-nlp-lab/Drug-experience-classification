@@ -131,3 +131,15 @@ dmypy.json
 *.Rproj
 .DS_Store
 .Rhistory
+data/
+data/all_drug_posts.json
+TADA2023_Bouzoubaa_Rezapour.pdf
+py/wandb/
+py/results/
+py/subject_model/
+py/gpt2-fine-tuned/
+py/gpt2-fine-tuned2/
+*/.DS_Store
+py/dev/
+
+.RData
