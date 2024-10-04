@@ -143,3 +143,6 @@ py/gpt2-fine-tuned2/
 py/dev/
 
 .RData
+constants.py
+output/
+acl-copyright-transfer-2021.pdf
